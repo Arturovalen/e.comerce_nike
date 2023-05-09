@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canard's</title>
+
+  <!--ICONO-->
+  <link rel="icon" href="images/logo.PNG">
+  <!--CSS-->
+  <link rel="stylesheet" href="./styles.css">
+  <!--ICONOS-->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+  <!-- NAV BAR -->
+
+  <header>
+
+    <section class="slider-fondo">
+
+      <div class="navbar">
+
+        <nav>
+
+          <h2 class="logo">Le<span>canard's</span></h2>
+
+          <ul>
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#productos">PRODUCTOS</a></li>
+            <li><a href="#footer">CONTÁCTANOS</a></li>
+          </ul>
+
+          <!-- LOGO CARRO -->
+
+          <a href="#" id="openCart">
+            <i style="color: #fff; cursor: pointer; padding-left: 20px;" class='bx bx-cart bx-md bx-tada-hover'></i>
+          </a>
+
+        </nav>
+
+      </div>
+
+      <!-- INICIO -->
+
+      <div id="inicio" class="btn-comprar-slider">
+
+        <!-- TITULO -->
+
+        <h2 class=text-over-button>Que Tu Ropa <span>No Te Defina</span></h2>
+
+        <button class="btn btn-comprar-bt" href="productos">COMPRAR</button><br>
+                
+        <!-- FLECHAS -->
+        
+        <i style="color: #fff;" class='bx bx-chevrons-down bx-lg bx-fade-down flecha'></i>
+
+      </div>
+
+      <div class="slider">
+
+        <ul>
+          <li class="img1"></li>
+          <li class="img2"></li>
+          <li class="img3"></li>
+        </ul>
+
+      </div>
+
+    </section>
+
+  </header>
+
+
+  <!-- PRODUCTOS -->
+
+  <section id="productos" class="products">
+    <div class="products__container">
+      <div class="products__container__card">
+        <div class="container__card-img">
+          <img src="https://pngimg.com/uploads/running_shoes/running_shoes_PNG5816.png" alt="Zapato Nike Runner">
+          <h2>Zapatos Nike Runner</h2>
+        </div>
+        <div class="container__content">
+          <div class="content__price">
+            <h3>Precio : $100.000</h3>
+          </div>
+          <div class="content__price">
+            <h3>Unidades : 1</h3>
+          </div>
+          <a href="#">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-------------FOOTER------------->
+
+  <div id="footer" class="footer">
+    <h3>LeCanard's</h3>
+    <p>Para ver las últimas promociones por temporada y nuevos descuentos síguenos en nuestras redes sociales. </p>
+    <div class="footer__social-buttons">
+      <a href="#"><i class='bx bx-fw bxl-meta' style='color:#ffffff'></i></a></li>
+      <a href="#"><i class='bx bx-fw bxl-instagram-alt' style='color:#ffffff'></i></a></li>
+      <a href="#"><i class='bx bx-fw bxl-twitter' style='color:#ffffff'></i></a></li>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>Todos los derechos reservados 2022</p>
+  </div>
+
+  <!----modal cart-->
+
+  <section class="cart" id="cart">
+    <div class="cart__container" id="cart__container">
+      <div class="cart-titulo">
+        <h2 class="cart__title"><i style="color: #d63031; cursor: pointer;" class='bx bx-cart bx-lg bx-tada-hover'></i>Carro</h2>
+            <a href="#" id="closeCart"><i style="color: #fff; cursor: pointer;" class=' bx bx-x bx-md
+            bx-tada-hover'></i></a>
+      </div>
+      <ul class="cart__list">
+        </li> 
+
+      </ul>
+
+      <div class="cart__checkout">
+        <h3 class="cart__count">Articulos: <span id="cart-count"></span></h3>
+        <h2 class="cart__total">Total: <span id="cart-total"></span></h2>
+
+        <div class="cart__checkout">
+          <button type="button" class="cart__button btn--checkout"><i class='bx bx-credit-card'></i>comprar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif ;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position: absolute;
+    width: 100%;
+}
+.navbar nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.logo{
+    margin-right: 40px;
+    color: #fff;
+    font-size: 28px;
+}
+
+span{
+    color: #d63031;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    transition: 0.5s;
+    color: #d63031;
+    cursor: pointer;
+
+}
+
+/* INICIO */
+
+.btn-comprar-slider{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    margin-top: 350px;
+}
+
+.btn-comprar-bt{
+    border: solid #fff 1px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-family: poppins,sans-serif;
+    color: #fff;
+    background-color: transparent;
+    padding: 15px;
+    cursor: pointer;
+}
+.btn-comprar-bt:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+}
+
+.text-over-button{
+    color: #fff;
+    padding: 15px;
+    font-size: 40px;
+}
+
+/*FONDO EN MOVIMIENTO*/
+
+.slider-fondo{
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+}
+.slider-fondo ul .img1,
+.slider-fondo ul .img2,
+.slider-fondo ul .img3 {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.slider-fondo ul .img1 {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(https://www.rockgota.com/vendor/source/Background%20e%20imagenes%20de%20index/onlyreptarbannerp%C3%A1ginawebhorizontal.jpg);
+}
+.slider-fondo ul .img2 {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(https://umomag.com/wp-content/uploads/2019/10/articulo-las-5-marcas-latinas-que-se-apoderan-del-streetwear-true-umomag.jpg);
+}
+.slider-fondo ul .img3 {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(https://wallpaperset.com/w/full/3/d/2/505775.jpg);
+}
+
+.slider-fondo ul{
+    display: flex;
+    padding: 0%;
+    width: 300%;
+}
+.slider-fondo .slider ul {
+    animation: cambio 18s infinite;
+    animation-direction: alternate;
+}
+.slider-fondo li{
+    width: 100%;
+    list-style: none;
+}
+.slider-fondo ul li img{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+@keyframes cambio {
+    0% {margin-left: 0;}
+    28% {margin-left: 0;}
+
+    33% {margin-left: -100%;}
+    61% {margin-left: -100%;}
+
+    66% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+}
+
+
+
+
+
+
+/*PRODUCTOS*/
+
+.products{
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    min-height: 100vh;
+    background: #2b2b2b;
+    overflow: hidden;
+    padding: 100px 20px;
+    box-sizing: border-box;
+}
+.products__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    margin: 0 auto;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.products__container .products__container__card{
+    position: relative;
+    width: 400px;
+    height: 400px;
+   
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border: white 1px solid;
+}
+
+.products__container .products__container__card .container__card-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.products__container .products__container__card .container__card-img img{
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
+    transition: 0.5s ease-in-out;
+}
+
+
+.products__container .products__container__card:hover .container__card-img{
+    transform: translateY(-100px);
+}
+
+.products__container .products__container__card:hover .container__card-img img{	
+    transform: translate(-20px,-40px) rotate(25deg) scale(1.4);
+}
+
+.products__container .products__container__card .container__card-img h2{
+    color: #fff;
+    font-weight: 600;
+    position: absolute;
+    padding-top: 200px;
+}
+
+.products__container .products__container__card .container__content{
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.products__container .products__container__card:hover .container__content{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-20px);
+}
+
+
+
+.products__container .products__container__card .container__content .content__price h3{
+    color: #d1d8e0;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-right: 10px;
+}
+
+
+.products__container .products__container__card .container__content a{
+    top: 20px;
+    display: inline-block;
+    padding: 5px 30px;
+    background: #fff;
+    border-radius: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #111;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.products__container .products__container__card .container__content a:hover{
+    background-color: #d63031;
+    transition: 0.5s;
+}
+
+
+
+/*Footer*/
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: #111;
+    height: auto;
+    width: auto;
+    padding-top: 0px;
+    color: #fff;
+}
+
+.footer h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.footer__social-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px;
+}
+
+.footer__bottom{
+    background: #000;
+    width: auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer__bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+/*modal carrito*/
+
+.cart {
+    margin-top: 0;
+  }
+  
+  .cart__container {
+    background-color: #fdfdfd38;
+    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);
+    backdrop-filter: blur(15px);
+    width: 20%;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    min-height: 40%;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    opacity: 0;
+  }
+  .cart-titulo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .cart__list {
+    row-gap: .5rem;
+    height: 150px;
+    overflow: auto;
+    list-style: none;
+  }
+  
+  .cart__item {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 0px 10px;
+    display: inline-block;
+  }
+  
+  .cart__article {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    align-items: center;
+  }
+  
+  .cart__image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  
+  .cart__data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cart__name {
+    font-size: 1rem;
+  }
+  
+  .cart__minmax {
+    display: flex;
+    column-gap: .5rem;
+    align-items: center;
+  }
+  
+  .cart__button {
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 25%;
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .cart__button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+  }
+  .cart__button i {
+    font-size: 1.2rem;
+  }
+  .btn--checkout {
+    width: max-content;
+    border-radius: 10px;
+    gap: .25rem;
+  }
+  .show{
+    pointer-events: auto;
+    opacity: 1;
+  }
